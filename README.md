@@ -148,6 +148,7 @@ Unlock the account and reset the password.
 Attempt to log in again with the new password to verify successful recovery.
 
 #Step 7 — Enabling and Disabling Accounts
+<img width="1666" height="981" alt="Screenshot (127)" src="https://github.com/user-attachments/assets/13233d89-8b44-4a03-9c04-46d59ed47d60" />
 
 Disable the same account in ADUC.
 
@@ -158,3 +159,26 @@ Re-enable the account.
 Attempt to log in again and confirm access is restored.
 
 #Step 8 — Observing Security Logs
+<img width="1789" height="1033" alt="Screenshot (128)" src="https://github.com/user-attachments/assets/b5b47b14-e9a0-4069-adeb-35f922ff15b1" />
+
+On the Domain Controller, open Event Viewer → Windows Logs → Security.
+
+Check for event(account locked out).
+
+Check for event failed logons).
+
+On the Client machine, open Event Viewer.
+
+Review event to trace the failed login attempts.
+
+  What we leanred
+   --------
+ Identity lifecycle ops: bulk user provisioning with PowerShell and OU targeting.
+
+Access control hardening: enforced Account Lockout Policy via GPO, validated on a domain-joined client.
+
+Incident response drill: triaged account lockout, unlocked & reset credentials, and restored access cleanly.
+
+ forensics: correlated DC and Client Security logs to identify source host and failure reasons.
+
+Operational hygiene: tested disable/enable flows and confirmed end-user impact/messages. 
