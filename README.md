@@ -25,6 +25,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Step 2 — Run the Random User Creation Script on DC-1
 - Step 3 — Verify Accounts in ADUC
 - Step 4 — Test Login with a Standard User
+- step 5 - making a password lock out
+- Step 6 — Unlocking the Account
+- Step 7 — Enabling and Disabling Accounts
+- Step 8 — Observing Security Logs
 
 <h2>Deployment and Configuration Steps</h2>
 <img width="1642" height="840" alt="Screenshot (122)" src="https://github.com/user-attachments/assets/de4a813a-c129-42d0-bc0f-797ae49257ac" />
@@ -121,3 +125,36 @@ Confirm successful sign-in with no administrative privileges.
 
  RDP access for Domain Users is working.
 Large-scale user creation was successful.
+
+       Group policy testing 
+-----------------------------------------
+
+<img width="1667" height="990" alt="Screenshot (125)" src="https://github.com/user-attachments/assets/f8b6b34f-e66c-4a2b-a64b-4affa36a8d14" />
+
+
+#step 5 - making a password lock out
+open active dicterory manger head to Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
+make it so it locks after 5 incorcet attempts and they have to wait 10 mintues in between every incorrect attempt for the timer to reset
+-use command prompt gpupdate / force to up date group policy
+- then fail the log in 6 times and obeserve
+
+#Step 6 — Unlocking the Account
+<img width="1684" height="1056" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/8a140c03-e819-466e-b46a-fc02c454c543" />
+
+In Active Directory Users and Computers (ADUC), locate the locked account.
+
+Unlock the account and reset the password.
+
+Attempt to log in again with the new password to verify successful recovery.
+
+#Step 7 — Enabling and Disabling Accounts
+
+Disable the same account in ADUC.
+
+Attempt to log in — observe the “account disabled” error.
+
+Re-enable the account.
+
+Attempt to log in again and confirm access is restored.
+
+#Step 8 — Observing Security Logs
