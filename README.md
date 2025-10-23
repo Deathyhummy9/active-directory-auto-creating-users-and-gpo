@@ -3,7 +3,7 @@
 </p>
 
 <h1> Automatic Bulk users creation on active directory using power shell and establishing group policy (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+This lab demonstrates how to automate bulk user creation in Active Directory using PowerShell and apply account lockout policies through Group Policy. It also covers unlocking and disabling accounts, testing security responses, and reviewing event logs for forensic visibility.<br />
 
 
 
