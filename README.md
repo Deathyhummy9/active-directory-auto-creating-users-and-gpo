@@ -43,6 +43,7 @@ Also in the active directory manger right under clients and add a group policy l
 
 --
 Step 2 — Run the Random User Creation Script on DC-1
+<img width="1661" height="995" alt="Screenshot (123)" src="https://github.com/user-attachments/assets/60281757-1137-4294-bc9c-479036475a99" />
 
 Open PowerShell ISE as Administrator on DC-1 and paste this script:
  # ----- Edit these Variables for your own Use Case ----- #
@@ -100,9 +101,23 @@ if you have a weaker computer you or a smaller businees you lower the number
 
 <p>
 Step 3 — Verify Accounts in ADUC
+<img width="1661" height="987" alt="Screenshot (124)" src="https://github.com/user-attachments/assets/bbee980a-7c95-4a43-8201-2d994f045db3" />
 
 Open Active Directory Users and Computers.
 Navigate to OU=_EMPLOYEES.
 Confirm all generated users are created and active.
 </p>
 <br />
+
+Step 4 — Test Login with a Standard User
+
+On a different RDP session, log in to Client-1 using one of the generated accounts:
+
+Example: mydomain\leko.romi
+
+Password: Password1
+
+Confirm successful sign-in with no administrative privileges.
+
+ RDP access for Domain Users is working.
+Large-scale user creation was successful.
